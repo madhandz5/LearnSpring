@@ -1,0 +1,235 @@
+	.content{		
+		height:100%;
+		width:100%;		
+	}
+	
+	.floatdiv{
+		position:fixed; 
+		display:none;
+		width:6%; 
+		height:40%;		
+		left:2%; /* 창에서 오른쪽 길이 */ 
+		top:45%; /* 창에서 위에서 부터의 길이 */ 
+		background-color:green;		
+	}
+
+	.middle{
+		background-color: lightgrey;
+		color: white;	
+		width : 100%;
+		padding-top:40%;
+		background-image : url('../image/loginCover.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;		
+	}
+	
+	.siteTitleWrapper{
+		position:absolute;		
+		width:60%;
+		padding-top:25%;		
+		float:left;			
+		left: 20%;	
+		top:20%;		
+	}
+
+
+	.sitetitle{
+		height:30%;
+		font-size : 5vw;	
+		transform: translateY(100%);
+	}
+
+	.siteTitle{
+		position:absolute;		
+		width:100%;
+		height:100%;		
+		background-color: rgba( 255, 255, 255, 0.5);
+		float:left;		
+		top:0%;		
+	}
+	
+	.search{
+		width:100%;
+		height:12%;	
+		transform: translateY(300%);	
+		background-color:white ;
+		border-bottom:2px solid; 
+		
+	}
+	
+	.search input[type=text]{
+		height:100%;
+		width: 70%;	
+		font-size:1.5vw;	
+		margin-left:1%;
+		padding:0;
+		float:left;
+	}
+
+	.searchButton{		
+		width:20%;
+		height:100%;
+		font-size:1.5vw;	
+		background-color:red;	
+		color:white;
+		float:left;
+		overflow:hidden;		
+	}
+
+	.searchButton p{
+		height:50%;
+		transform: translateY(50%);
+		font-weight: bold;
+	}
+	
+	.searchIcon{
+		float:left;
+		width:5%;
+		height:50%;
+		transform: translateY(40%);
+		font-size:2vw;
+		outline: 0;
+	}
+	
+	.searchIcon i{
+		height:50%;
+	}
+
+	.planShop{
+		overflow: hidden;		
+		color: white;		
+		width: 80%;
+		padding-bottom:15%;
+		margin:0 auto;
+		transform: translateY(-20%);			
+	}
+
+	.planShopMenu{
+		position:absolute;
+		background-color:lightblue;
+		width:100%;
+		height:100%;			
+	}
+
+	.planShopMenu div{
+		width: 20%;
+		margin-left:2%;
+		height: 100%;
+		display:inline-block;
+		overflow:hidden;
+		font-size:1.5vw;
+	}
+	
+	.planShopMenu i{
+		font-size:8vw;
+		margin-top:15%;
+	}
+
+
+	.product{
+		height:auto;
+		width:80%;
+		margin:0 auto;	
+	}
+
+	.productWrapper{
+		width:100%;			
+		padding-top:430%; 
+	}
+	
+	.productBox{
+		position:absolute;
+		height:100%;
+		width:100%;	
+		top: 0;
+		left: 0;	
+	}
+	
+	.issueTitle{
+		width : 100%;
+		margin-top:1%;
+		height : 1%;
+		background-color:blue;
+		font-size:2vw;
+		font-weight:bold;
+		color:white;
+	}
+	
+	.productLine{
+		overflow: hidden;	
+		height:23%;
+		margin-top:1%;
+		margin-bottom:1%;
+	}
+	
+	.productItem{		
+		float:left;
+		width:38%;
+		left:9%;
+		height:50%;
+		margin-left:2%;
+	}
+
+	.bookImg{
+		height:80%;
+		width:100%;
+	}
+	
+	.bookImg img{
+		max-width:100%;
+		min-width:100%;
+		max-height:100%;
+		min-height:100%;
+		box-shadow: 2px 2px 5px black;
+	}
+	
+	.bookTitle{
+		margin-top:4%;
+		font-size:1vw;
+		font-weight:bold;
+		height:20%;
+	}
+
+	.bottom{
+		background-color: lightgrey;
+		color: white;
+		height:20%;
+	}
+	
+	.bookUse{
+		overflow:hidden;
+		width:90%;
+		left:3%;
+		transform:translateY(-600%);
+		position:absolute;
+		display:none;
+	}
+	
+	.bookUse div{
+		float:left;
+		width:50%;
+	}
+	
+	.bookUse div a{
+		font-size:1.5vw;
+		color:white;
+	    font-weight: bolder;
+	    background-color:black;
+	}
+	
+	.bdWrapper{
+		overflow:hidden;
+		width:70%;
+		left:30%;
+	}
+
+
+	.bookimg{
+		float:left;
+		width:30%;
+	}
+	
+	.bookinfo{
+		float:left;
+		width:70%;
+	}

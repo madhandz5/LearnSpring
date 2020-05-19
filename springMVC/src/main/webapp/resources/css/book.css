@@ -1,0 +1,80 @@
+	.recentBookLine{
+		overflow:hidden;
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
+	
+	.bookUse{
+		overflow:hidden;
+		width:90%;
+		left:3%;
+		transform:translateY(-600%);
+		position:absolute;
+		display:none;
+	}
+	
+	.bookUse div{
+		float:left;
+		width:50%;
+	}
+	
+	.bookUse div a{
+		font-size:1.5vw;
+		color:white;
+	    font-weight: bolder;
+	    background-color:black;
+	}
+	
+	.bdWrapper{
+		overflow:hidden;
+		width:70%;
+		left:15%;
+	}
+
+	.bookimg{
+		float:left;
+		width:30%;
+	}
+	
+	.bookimg div{
+		font-size : 2vw;
+		background-color:red;
+	}
+	
+	.bookimg a{
+		color:white;
+	}
+	
+	.bookinfo{
+		float:left;
+		width:70%;
+	}
+	
+	
+	.myWrapper{
+		height:70%;
+	}
+	
+	.myInfo{
+		overflow:hidden;
+		width:50%;
+		left:30%;
+		height:20%;
+		font-size:1.5vw;
+		margin-bottom:5%;
+	}
+	
+	.myInfo :nth-child(1) {
+		width:45%;
+		float:left;
+		height:100%;
+		color:graytext;
+	}
+	
+	.myInfo :nth-child(2) {
+		width:50%;
+		float:left;
+		height:100%;
+		color:red;
+		font-size:1vw;
+	}	
