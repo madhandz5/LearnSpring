@@ -18,9 +18,11 @@
 	<h1>회원 가입 성공!!</h1>
 	<h3>--- 회원 정보 ---</h3>
 	<p><%= id %>님 환영합니다!<br>
+	<p><%= passwd %>님 환영합니다!<br>
+	<p><%= tell %>님 환영합니다!<br>
 	<br><br>
 	<hr>
-	<a href="index.jsp">메인으로 가기</a>
+	<a href="<%=request.getContextPath()%>/index/index.do">메인으로 가기</a>
 </body>
 </html>
 

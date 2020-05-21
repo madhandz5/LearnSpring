@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../include/header.jsp" %>
-<link rel="stylesheet" href="/servletBM/resources/css/mypage.css" />
+<link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/mypage.css" />
 </head>
 <body>
 <%@include file="../include/top.jsp" %>
