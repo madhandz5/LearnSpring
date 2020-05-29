@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias
+			type="com.spring.springmvc.member.model.vo.Member" alias="Member" />
+		<typeAlias type="com.spring.springmvc.book.model.vo.Book"
+			alias="Book" />
+			<typeAlias type="com.spring.springmvc.board.model.vo.Notice"
+			alias="Notice" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="/mybatis/mappers/bookMapper.xml" />
+		<mapper resource="/mybatis/mappers/memberMapper.xml" />
+		<mapper resource="/mybatis/mappers/noticeMapper.xml" />
+	</mappers>
+</configuration>

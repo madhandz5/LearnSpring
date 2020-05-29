@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+	<select id="selectId" resultType="string">
+		select m_id from tb_member
+		where m_id = #{id}
+	</select>
+	
+	<insert id="insertMember" parameterType="Map">
+		insert into tb_member
+		values(#{userId},#{userPwd},#{m_email},1001,#{m_tell},sysdate,sysdate,'N')
+	</insert>
+	
+	<resultMap type="Member" id="resultMember">
+	</resultMap>
+	
+	<select id="selectMember" parameterType="Map" resultMap="resultMember">
+	<!-- <select id="selectMember" parameterType="Map" resultType="Member"> -->
+		select m_id, c_info, m_tell, m_reg_date, m_rentable_date
+		from tb_member inner join tb_code on
+		m_grade = c_code
+		where m_id= #{id} and m_password= #{pw}
+	
+	</select>
+</mapper>

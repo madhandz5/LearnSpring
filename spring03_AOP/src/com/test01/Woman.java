@@ -1,17 +1,17 @@
 package com.test01;
 
 public class Woman {
-
+	
 	public void classWork() {
-
-		System.out.println("Ãâ¼®Ä«µå Âï´Â´Ù.");
-
+		System.out.println("ì¶œì„ì¹´ë“œë¥¼ ì°ëŠ”ë‹¤.");
 		try {
-			System.out.println("ÄÄÇ»ÅÍ¸¦ ÄÑ¼­ ¿À¶óÅ¬À» ÇÑ´Ù.");
+			System.out.println("ì»´í“¨í„°ë¥¼ ì¼œì„œ ì˜¤ë¼í´ì„ í•œë‹¤.");
 		} catch (Exception e) {
-			System.out.println("½¬´Â ³¯ÀÌ¾ú´Ù.");
-		} finally {
-			System.out.println("Áı¿¡°£´Ù.");
+			System.out.println("ì‰¬ëŠ” ë‚ ì´ì—ˆë‹¤.");
+		}finally {
+			System.out.println("ì§‘ì—ê°„ë‹¤.");
 		}
 	}
+	
+	
 }

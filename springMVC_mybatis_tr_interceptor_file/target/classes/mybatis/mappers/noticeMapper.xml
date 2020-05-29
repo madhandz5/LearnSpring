@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Notice">
+	<select id="contentCnt" resultType="int">
+		select count(*) from
+		tb_notice
+	</select>
+
+	<select id="selectNoticeList" resultType="Notice">
+		select * from(
+		select
+		rownum rnum, n1.* from(
+		select * from
+		tb_notice
+		order by ${orderby} desc
+		)n1
+		) where rnum between #{page.start} and #{page.end}
+	</select>
+	<insert id="insertNotice">
+		insert into tb_notice values(
+		S_NOTICE.nextval
+		,#{noticeTitle}
+		,sysdate
+		,#{noticeWriter}
+		,#{noticeContent}
+		)
+
+	</insert>
+
+	<insert id="insertFile">
+		insert into tb_file values(
+		S_TB_FILE_IDX.nextval
+		,S_NOTICE.currval
+		,#{originFileName}
+		,#{renameFileName}
+		,#{savePath}
+		)
+	</insert>
+
+	<select id="noticeDetail" resultType="Notice">
+		select * from tb_notice
+		where noticeno = #{noticeNo}
+
+	</select>
+
+	<resultMap type="map" id="fileData">
+		<result column="originFileName" property="originFileName" />
+		<result column="renameFileName" property="renameFileName" />
+		<result column="SAVEPATH" property="SAVEPATH" />
+		<result column="NOTICENO" property="NOTICENO" />
+	</resultMap>
+
+	<select id="selectFiles" resultMap="fileData">
+		select
+		*
+		from
+		tb_file
+		where
+		noticeNo = #{noticeNo}
+	</select>
+
+	<delete id="deleteNotice">
+		delete from tb_notice where noticeNo = #{noticeNo}
+	</delete>
+	
+	<delete id="deleteFiles">
+		delete from tb_file where noticeNo = #{noticeNo}	
+	</delete>
+
+</mapper>

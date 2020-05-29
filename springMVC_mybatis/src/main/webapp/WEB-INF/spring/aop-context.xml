@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<bean name="logAop" class="common.LogAop"/>
+	<aop:config>
+		<!-- 스프링아래에 있는 모든 접근제한자 모든 패키지 매개변수 상관없이 -->
+		<!-- 프록시객체가 동적으로 만들어지고 메소드를 프록시가 낚아챈다 -->
+		<aop:pointcut expression="execution(* com.spring.springmvc..*.*(..))" id="JoinPoint"/>
+		<aop:aspect id="logAop" ref="logAop">
+			<aop:before method="before" pointcut-ref="JoinPoint"/>
+			<aop:after method="after" pointcut-ref="JoinPoint"/>
+			<aop:after-throwing method="afterThrowing" pointcut-ref="JoinPoint" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

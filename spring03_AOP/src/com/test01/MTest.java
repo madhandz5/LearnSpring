@@ -1,19 +1,16 @@
 package com.test01;
 
-public class MTest {
-
+public class Mtest {
 	public static void main(String[] args) {
-		Woman woman = new Woman();
-
-		Man man = new Man();
-
-		System.out.println("¿©ÇĞ»ı ÀÔÀå");
-		woman.classWork();
-
-		System.out.println("---------------");
-		System.out.println("³²ÇĞ»ı ÀÔÀå");
-		man.classWork();
-
+		
+		Woman w = new Woman();
+		Man m = new Man();
+		
+		System.out.println("ì—¬í•™ìƒì…ì¥");
+		 w.classWork();
+		System.out.println("------------------");
+		System.out.println("ë‚¨í•™ìƒ ì…ì¥");
+		m.classWork();
+		
 	}
-
 }
